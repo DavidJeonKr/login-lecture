@@ -10,12 +10,11 @@ class User {
 
     login() {
         const body = this.body;
-        const {id, psword} = UserStorage.getUsers("woorimIT");
+        const {id, psword} = UserStorage.getUserInfo(body.id);
 
         if( id ) {
             if (id === body.id && psword === body.psword) {
                 return {success: true};
-
             }
             return {success: false, msg: "비밀번호가 틀렸습니다."};
 
