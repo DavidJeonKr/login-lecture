@@ -7,7 +7,7 @@ class User {
         this.body = body;
     }
 
-
+    // 로그인 로직
     login() {
         const body = this.body;
         const {id, psword} = UserStorage.getUserInfo(body.id);
